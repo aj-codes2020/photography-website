@@ -1,0 +1,47 @@
+@import '../../App.scss';
+
+/* ---- FAQ Section Container ---- */
+.faq-section {
+  height: auto;
+  min-height: 100px;
+
+  @media only screen and (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+/* ---- Accordion ---- */
+.faq-accordion {
+  width: 100%;
+}
+
+/* ---- Accordion Item ---- */
+.accordion-item {
+  color: var(--text-color);
+  border-bottom: 1px solid var(--foreground);
+}
+
+/* ---- Accordion Title ---- */
+.accordion-title {
+  background-color: transparent;
+}
+
+.accordion-title.active,
+.accordion-title:hover {
+  background-color: var(--active-hover-color);
+}
+
+/* ---- Accordion Content ---- */
+.accordion-content.active {
+  height: fit-content;
+}
+
+@media only screen and (max-width: 768px) {
+  .accordion-content.active {
+    height: fit-content;
+  }
+}

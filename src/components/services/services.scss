@@ -1,0 +1,102 @@
+@import '../../App.scss';
+
+/* ---- Service Image Box ---- */
+.service-img-box {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  height: 300px;
+  border: 5px solid var(--background);
+  position: relative;
+  border-radius: 15px;
+  background-color: var(--background);
+  overflow: hidden;
+  transition: 0.5s ease-in-out;
+}
+
+/* ---- Service Image ---- */
+.service-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.5s ease-in-out;
+}
+
+/* ---- Group ---- */
+.group {
+  height: 20%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  z-index: 10;
+  transition: 0.5s ease-in-out;
+  color: var(--middleground);
+  background-color: var(--foreground);
+
+  h3{
+    margin-left: 1rem;
+  }
+    /* ---- Button ---- */
+    .button {
+      display: none;
+      margin-left: 1rem;
+      margin-top: 2.5rem;
+  }
+}
+
+/* ---- Instruction ---- */
+.instruction {
+  position: absolute;
+  right: 5%;
+  &::before {
+    @media (min-width: 768px) {
+      content: 'Hover ';
+    }
+    @media (max-width: 768px) {
+      content: 'Click ';
+    }
+  }
+}
+
+/* ---- Service Description ---- */
+.service-description {
+  display: none;
+  width: 80%;
+  margin-left: 1rem;
+}
+
+
+
+/* ---- Group Hover ---- */
+.service-img-box:hover .group {
+  height: 100%;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: relative;
+  transition: 0.5s ease-in-out;
+
+    /* ---- Button ---- */
+    .button {
+      display: flex;
+      margin-left: 1rem;
+      margin-top: 2.5rem;
+  }
+}
+
+.service-img-box:hover .instruction {
+  display: none;
+}
+
+.service-img-box:hover .service-description {
+  display: flex;
+}
+
+.service-img-box:hover .button {
+  display: flex;
+}

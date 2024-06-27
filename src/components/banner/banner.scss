@@ -1,0 +1,77 @@
+@import '../../App.scss';
+
+/* ---- Banner ---- */
+.banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  min-height: 667px;
+  min-width: 300px;
+}
+
+/* ---- Banner Content ---- */
+.banner-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-right: 150px;
+
+  h1 {
+    margin: 2px;
+    font-size: 8rem;
+    font-weight: 800;
+    color: var(--foreground);
+  }
+
+  p {
+    max-width: 600px;
+  }
+}
+
+/* ---- Banner Sub-Content ---- */
+.banner-sub-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: auto;
+  padding: 1rem;
+
+  h3 {
+    color: var(--foreground);
+    position: relative; // Ensure h3 is the reference for positioning ::after
+    margin: 0; // Reset margin if needed
+
+    &::after {
+      content: ' ';
+      display: block;
+      width: 15%;
+      height: 2px;
+      background-color: var(--foreground);
+      margin-top: 0.5rem;
+    }
+  }
+}
+
+/* ---- Media Queries ---- */
+@media only screen and (max-width: 769px) {
+  .banner-sub-content {
+    display: none;
+  }
+
+  .banner-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0;
+
+    h1 {
+      font-size: 5rem;
+    }
+
+    p {
+      max-width: 500px;
+    }
+  }
+}

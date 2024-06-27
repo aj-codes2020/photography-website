@@ -1,0 +1,10 @@
+export { default as BannerBackground } from './videos/banner-background.mp4';
+export { default as Img1 } from './img/img1.jpg';
+export { default as Img2 } from './img/img2.jpg';
+export { default as Img3 } from './img/img3.jpg';
+export { default as ImgAbout } from './img/about-img.jpg';
+export { default as Logo } from './img/logo.png';
+export { default as SelfImage1 } from './img/self1.jpg';
+export { default as SelfImage2 } from './img/self2.jpg';
+export { default as SelfImage3 } from './img/self3.jpg';
+export { default as SelfImage4 } from './img/self4.jpg';

@@ -1,0 +1,59 @@
+@import '../../App.scss';
+
+/* ---- About Section Container ---- */
+.about-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+}
+
+/* ---- About Image Container ---- */
+.about-image-container {
+  display: flex;
+  flex-direction: column;
+  height: 500px;
+  border-radius: 15px;
+  background-color: var(--foreground);
+  overflow: hidden;
+  transition: opacity 0.5s ease-in;
+}
+
+/* ---- About Image ---- */
+.about-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ---- Mobile About Image Container ---- */
+.mobile-about-image-container {
+  display: none;
+  height: 200px;
+  border-radius: 15px;
+  background-color: var(--foreground);
+  overflow: hidden;
+  transition: opacity 0.5s ease-in;
+}
+
+/* ---- Mobile About Image ---- */
+.mobile-about-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ---- Media Queries ---- */
+@media only screen and (max-width: 768px) {
+  .about-image-container {
+    display: none;
+  }
+
+  .mobile-about-image-container {
+    display: flex;
+  }
+
+  .mobile-about-image {
+    display: flex;
+  }
+}
